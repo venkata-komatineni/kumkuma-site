@@ -17,8 +17,8 @@ app.mount("/static", StaticFiles(directory=str(BASE / "static")), name="static")
 BRAND = {
     "name": "Kumkuma",
     "tagline": "Biryani-only cloud kitchen",
-    "phone": "+44 20 7123 4567",
-    "address": "123 Spice Lane, London",
+    "phone": "+44 7879979778",
+    "address": "Hatfield",
     "hours": "Mon–Sun 11:00–23:00",
     "colors": {"saffron":"#FF6F00","maroon":"#7B1F2A","beige":"#F5E6C8","charcoal":"#2C2C2C"},
 }
