@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Order over Call</h1>
+<p>Give us a ring and we’ll confirm your order and pickup/delivery timing.</p>
+<div class="contact-card">
+  <div class="phone-big">
+    <a href="tel:{{ BRAND.phone|replace(' ', '') }}">{{ BRAND.phone }}</a>
+  </div>
+  <div class="details">
+    <div><strong>Address:</strong> {{ BRAND.address }}</div>
+    <div><strong>Hours:</strong> {{ BRAND.hours }}</div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>About {{ BRAND.name }}</h1>
+<p>We're a small team dedicated to the craft of biryani. By focusing on a few dishes, we control quality and speed.</p>
+<ul class="bullets">
+  <li>Family recipes and consistent technique</li>
+  <li>Prep starts fresh each morning</li>
+  <li>Vegetarian and non-vegetarian kitchens separated</li>
+</ul>
+<p>Questions? Call us at <a class="phone-inline" href="tel:{{ BRAND.phone|replace(' ', '') }}">{{ BRAND.phone }}</a>.</p>
+{% endblock %}

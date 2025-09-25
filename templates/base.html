@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ BRAND.name }} — {{ title }}</title>
+  <meta name="description" content="Kumkuma: biryani-only kitchen. Order over call: {{ BRAND.phone }}." />
+  <meta property="og:title" content="{{ BRAND.name }} — {{ title }}" />
+  <meta property="og:description" content="Biryani-only kitchen in London. Order over call: {{ BRAND.phone }}." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/static/logo.svg" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">
+      <img alt="Kumkuma logo" src="/static/logo.svg" width="36" height="36" />
+      <span>{{ BRAND.name }}</span>
+    </a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/menu">Menu</a>
+      <a href="/about">About</a>
+      <a class="cta" href="/contact">Order over Call</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <strong>{{ BRAND.name }}</strong><br/>
+        {{ BRAND.address }}<br/>
+        Hours: {{ BRAND.hours }}
+      </div>
+      <div>
+        Call to order:<br/>
+        <a class="phone" href="tel:{{ BRAND.phone|replace(' ', '') }}">{{ BRAND.phone }}</a>
+      </div>
+      <div class="small">© {{ year }} {{ BRAND.name }}. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

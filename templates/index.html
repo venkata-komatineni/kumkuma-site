@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Fragrant biryani, made to order.</h1>
+  <p>{{ BRAND.tagline }} — Chicken, Mutton, and Veg classics.</p>
+  <div class="hero-actions">
+    <a class="btn" href="/menu">View Menu</a>
+    <a class="btn secondary" href="/contact">Order over Call</a>
+  </div>
+</section>
+
+<section class="highlights">
+  <div class="card">
+    <h3>Focused Menu</h3>
+    <p>We do one thing well — biryani. Three stellar options, zero confusion.</p>
+  </div>
+  <div class="card">
+    <h3>Quality Ingredients</h3>
+    <p>Basmati rice, whole spices, and time-tested technique.</p>
+  </div>
+  <div class="card">
+    <h3>Simple Ordering</h3>
+    <p>Order on the phone: <a class="phone-inline" href="tel:{{ BRAND.phone|replace(' ', '') }}">{{ BRAND.phone }}</a></p>
+  </div>
+</section>
+{% endblock %}

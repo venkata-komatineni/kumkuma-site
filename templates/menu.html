@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Menu</h1>
+<p>Order over call: <a class="phone-inline" href="tel:{{ BRAND.phone|replace(' ', '') }}">{{ BRAND.phone }}</a></p>
+<div class="menu-list">
+  {% for it in items %}
+  <div class="menu-item">
+    <div class="menu-item-info">
+      <h3>{{ it.name }}</h3>
+      <p>{{ it.desc }}</p>
+    </div>
+    <div class="menu-item-price">{{ it.price }}</div>
+  </div>
+  {% endfor %}
+</div>
+<div class="note">All prices include VAT. Ask about allergens when you call.</div>
+{% endblock %}
