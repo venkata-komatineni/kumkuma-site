@@ -4,6 +4,8 @@ from fastapi.staticfiles import StaticFiles
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from pathlib import Path
 import datetime as dt
+import os
+print("STARTUP: kumkuma-site", os.getcwd())
 
 BASE = Path(__file__).parent
 templates = Environment(
